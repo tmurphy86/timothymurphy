@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
-import { push as Menu } from "react-burger-menu";
+import { slide as Menu } from "react-burger-menu";
 import {
   HomeNavbar,
   Hamburger,
@@ -31,10 +31,9 @@ class Home extends Component {
 
     return (
       <div id="outer-container">
-        <header>I am a fixed header!</header>
         <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
         <main id="page-wrap">
-          <Menu isOpen={false}>
+          <Menu>
             <a id="home" className="menu-item" href="/">
               Home
             </a>
@@ -48,27 +47,36 @@ class Home extends Component {
               Settings
             </a>
           </Menu>
-          <Container>
-            <Jumbo className="jumbotron">
-              <Rotating> </Rotating>
-            </Jumbo>
-            <div className="ui placeholder segment">
-              <Timeline />
+          <Menu pageWrapId={"page-wrap"} />
+          <main id="page-wrap">
+            <div className="Navbar">
+              <header className="Nav-header">
+                <Hamburger> </Hamburger> <Container> </Container>
+                <Button className="Contact-button"> Contact me! </Button>
+              </header>
+              <Container>
+                <Jumbo className="jumbotron">
+                  <Rotating> </Rotating>
+                </Jumbo>
+                <div className="ui placeholder segment">
+                  <Timeline />
+                </div>
+                <div className="ui placeholder segment" />
+                <ApprovalCard>
+                  <CommentDetails
+                    avatar={faker.image.avatar()}
+                    author="NameProp"
+                    timestamp={(Date.now() / 1000) | 0}
+                    posttext="Another hard hitting piece"
+                  />
+                </ApprovalCard>
+                <ApprovalCard>
+                  <CommentDetails />
+                </ApprovalCard>
+                <CommentDetails />
+              </Container>
             </div>
-            <div className="ui placeholder segment" />
-            <ApprovalCard>
-              <CommentDetails
-                avatar={faker.image.avatar()}
-                author="NameProp"
-                timestamp={(Date.now() / 1000) | 0}
-                posttext="Another hard hitting piece"
-              />
-            </ApprovalCard>
-            <ApprovalCard>
-              <CommentDetails />
-            </ApprovalCard>
-            <CommentDetails />
-          </Container>
+          </main>
         </main>
       </div>
     );
