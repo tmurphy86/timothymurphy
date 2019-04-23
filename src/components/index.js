@@ -6,3 +6,4 @@ export { default as Jumbo } from "./jumbo.js";
 export { default as CommentDetails } from "./CommentDetails.js";
 export { default as ApprovalCard } from "./ApprovalCard.js";
 export { default as Timeline } from "./Timeline.js";
+export { default as Position } from "./Position.js";

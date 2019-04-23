@@ -46,6 +46,7 @@ To learn React, check out the [React documentation](https://reactjs.org/).
 ## Next Steps
 
 Connect timeline to LinkedIn API.
+Connect Photo rotation to Instagram API & Google Photos Lib.
 
 ### Code Splitting
 

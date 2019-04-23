@@ -9,7 +9,8 @@ import {
   Jumbo,
   CommentDetails,
   ApprovalCard,
-  Timeline
+  Timeline,
+  Position
 } from ".././components";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -24,14 +25,8 @@ class Home extends Component {
     event.preventDefault();
   }
   render() {
-    window.navigator.geolocation.getCurrentPosition(
-      position => console.log(position),
-      err => console.log(err)
-    );
-
     return (
       <div id="outer-container">
-        <header>I am a fixed header!</header>
         <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
         <main id="page-wrap">
           <Menu isOpen={false}>
@@ -48,10 +43,11 @@ class Home extends Component {
               Settings
             </a>
           </Menu>
+
+          <Jumbo className="jumbotron">
+            <Rotating> </Rotating>
+          </Jumbo>
           <Container>
-            <Jumbo className="jumbotron">
-              <Rotating> </Rotating>
-            </Jumbo>
             <div className="ui placeholder segment">
               <Timeline />
             </div>
@@ -65,9 +61,8 @@ class Home extends Component {
               />
             </ApprovalCard>
             <ApprovalCard>
-              <CommentDetails />
+              <Position />
             </ApprovalCard>
-            <CommentDetails />
           </Container>
         </main>
       </div>
