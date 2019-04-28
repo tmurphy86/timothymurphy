@@ -9,3 +9,5 @@ export { default as Timeline } from "./Timeline.js";
 export { default as Position } from "./Position.js";
 export { default as MenuExt } from "./MenuExt.js";
 export { default as Clock } from "./Clock.js";
+export { default as SearchBar } from "./SearchBar.js";
+export { default as ContactMe } from "./ContactMe.js";

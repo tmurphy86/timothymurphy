@@ -11,7 +11,9 @@ import {
   ApprovalCard,
   Timeline,
   Position,
-  MenuExt
+  MenuExt,
+  SearchBar,
+  ContactMe
 } from ".././components";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -33,22 +35,27 @@ class Home extends Component {
           <Jumbo className="jumbotron">
             <Rotating> </Rotating>
           </Jumbo>
+          <SearchBar />
           <Container>
             <div className="ui placeholder segment">
               <Timeline />
             </div>
-            <div className="ui placeholder segment" />
-            <ApprovalCard>
-              <CommentDetails
-                avatar={faker.image.avatar()}
-                author="NameProp"
-                timestamp={(Date.now() / 1000) | 0}
-                posttext="Another hard hitting piece"
-              />
-            </ApprovalCard>
-            <ApprovalCard>
-              <Position />
-            </ApprovalCard>
+            <div className="ui placeholder segment">
+              <ApprovalCard>
+                <CommentDetails
+                  avatar={faker.image.avatar()}
+                  author="NameProp"
+                  timestamp={(Date.now() / 1000) | 0}
+                  posttext="Another hard hitting piece"
+                />
+              </ApprovalCard>
+              <ApprovalCard>
+                <Position />
+              </ApprovalCard>
+              <ApprovalCard>
+                <ContactMe />
+              </ApprovalCard>
+            </div>
           </Container>
         </main>
       </div>
