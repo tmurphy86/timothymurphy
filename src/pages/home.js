@@ -10,7 +10,8 @@ import {
   CommentDetails,
   ApprovalCard,
   Timeline,
-  Position
+  Position,
+  MenuExt
 } from ".././components";
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
@@ -27,23 +28,8 @@ class Home extends Component {
   render() {
     return (
       <div id="outer-container">
-        <Menu pageWrapId={"page-wrap"} outerContainerId={"outer-container"} />
+        <MenuExt />
         <main id="page-wrap">
-          <Menu isOpen={false}>
-            <a id="home" className="menu-item" href="/">
-              Home
-            </a>
-            <a id="about" className="menu-item" href="/about">
-              About
-            </a>
-            <a id="contact" className="menu-item" href="/contact">
-              Contact
-            </a>
-            <a onClick={this.showSettings} className="menu-item--small" href="">
-              Settings
-            </a>
-          </Menu>
-
           <Jumbo className="jumbotron">
             <Rotating> </Rotating>
           </Jumbo>

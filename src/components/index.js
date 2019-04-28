@@ -7,3 +7,5 @@ export { default as CommentDetails } from "./CommentDetails.js";
 export { default as ApprovalCard } from "./ApprovalCard.js";
 export { default as Timeline } from "./Timeline.js";
 export { default as Position } from "./Position.js";
+export { default as MenuExt } from "./MenuExt.js";
+export { default as Clock } from "./Clock.js";
