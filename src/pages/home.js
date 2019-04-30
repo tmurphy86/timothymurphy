@@ -4,8 +4,7 @@ import { push as Menu } from "react-burger-menu";
 import {
   HomeNavbar,
   Hamburger,
-  Layout,
-  Rotating,
+  // Layout,
   Jumbo,
   CommentDetails,
   ApprovalCard,
@@ -32,9 +31,7 @@ class Home extends Component {
       <div id="outer-container">
         <MenuExt />
         <main id="page-wrap">
-          <Jumbo className="jumbotron">
-            <Rotating> </Rotating>
-          </Jumbo>
+          <Jumbo className="jumbotron" />
           <SearchBar />
           <Container>
             <div className="ui placeholder segment">

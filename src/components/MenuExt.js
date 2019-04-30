@@ -8,6 +8,7 @@ export default class MenuExt extends React.Component {
 
   render() {
     return (
+      // <div id="outer-container">
       <Menu pageWrapId={"push"} outerContainerId={"push"} isOpen={false}>
         <a id="home" className="menu-item" href="/">
           Home
@@ -22,6 +23,8 @@ export default class MenuExt extends React.Component {
           Settings
         </a>
       </Menu>
+      //   <main id="page-wrap">{props.children}</main>
+      // </div>
     );
   }
 }
