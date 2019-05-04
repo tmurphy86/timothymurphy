@@ -2,7 +2,13 @@ import React from "react";
 // import { jQuery as $ } from "jquery";
 
 class ContactMe extends React.Component {
-  state = { term: "" };
+  state = {
+    fname: "",
+    lname: "",
+    address: "",
+    number: "",
+    comment: ""
+  };
 
   onFormSubmit = event => {
     event.preventDefault();
@@ -81,17 +87,33 @@ class ContactMe extends React.Component {
             <input
               type="text"
               prompt="First Name..."
-              value={this.state.term}
-              onChange={e => this.setState({ term: e.target.value })}
+              value={this.state.fname}
+              onChange={e => this.setState({ fname: e.target.value })}
             />
             <label>Last Name:</label>
-            <input type="text" />
+            <input
+              type="text"
+              value={this.state.lname}
+              onChange={e => this.setState({ lname: e.target.value })}
+            />
             <label>Email Address:</label>
-            <input type="text" />
+            <input
+              type="text"
+              value={this.state.address}
+              onChange={e => this.setState({ address: e.target.value })}
+            />
             <label>Phone Number:</label>
-            <input type="text" />
+            <input
+              type="text"
+              value={this.state.number}
+              onChange={e => this.setState({ number: e.target.value })}
+            />
             <label>Comment:</label>
-            <input type="text" />
+            <input
+              type="text"
+              value={this.state.comment}
+              onChange={e => this.setState({ comment: e.target.value })}
+            />
           </div>
         </form>
       </div>

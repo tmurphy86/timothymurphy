@@ -2,7 +2,7 @@ import React from "react";
 
 class SearchBar extends React.Component {
   onInputChange(event) {
-    var texte = event.target.value;
+    var term = event.target.value;
   }
   onButtonClick(event) {
     console.log(event.target.value);

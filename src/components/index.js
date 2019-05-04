@@ -1,13 +1,12 @@
 export { default as HomeNavbar } from "./nav.js";
 export { default as Hamburger } from "./3bar.js";
-export { default as Layout } from "./layout.js";
+export { default as Layout } from "./Layout.js";
 export { default as Rotating } from "./rotatingtext.js";
-export { default as Jumbo } from "./jumbo.js";
+export { default as Jumbo } from "./Jumbo.js";
 export { default as CommentDetails } from "./CommentDetails.js";
 export { default as ApprovalCard } from "./ApprovalCard.js";
 export { default as Timeline } from "./Timeline.js";
 export { default as Position } from "./Position.js";
-export { default as MenuExt } from "./MenuExt.js";
 export { default as Clock } from "./Clock.js";
 export { default as SearchBar } from "./SearchBar.js";
 export { default as ContactMe } from "./ContactMe.js";

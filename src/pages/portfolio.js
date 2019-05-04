@@ -1,64 +1,20 @@
-import React, { Component } from 'react';
-import Container from 'react-bootstrap/Container'
-import {HomeNavbar, Hamburger, Layout } from ".././components";
-import Button from 'react-bootstrap/Button';
-import Card from 'react-bootstrap/Card';
-import CardDeck from 'react-bootstrap/CardDeck'
-import './main.css';
-
+import React, { Component } from "react";
+import { Timeline, HomeNavbar } from ".././components";
 
 class Portfolio extends Component {
   render() {
     return (
-
-      <div className="App">
-        <header className="App-header">
-        <Container>
-        <Hamburger></Hamburger>
-        <CardDeck>
-          <Card>
-           <Card.Img variant="top" src="../../public/img/download.png" />
-           <Card.Body>
-             <Card.Title>Card title</Card.Title>
-             <Card.Text>
-               This is a wider card with supporting text below as a natural lead-in to
-               additional content. This content is a little bit longer.
-             </Card.Text>
-           </Card.Body>
-           <Card.Footer>
-             <small className="text-muted">Last updated 3 mins ago</small>
-           </Card.Footer>
-          </Card>
-          <Card>
-           <Card.Img variant="top" src="holder.js/100px160" />
-           <Card.Body>
-             <Card.Title>Card title</Card.Title>
-             <Card.Text>
-               This card has supporting text below as a natural lead-in to additional
-               content.{' '}
-             </Card.Text>
-           </Card.Body>
-           <Card.Footer>
-             <small className="text-muted">Last updated 3 mins ago</small>
-           </Card.Footer>
-          </Card>
-          <Card>
-           <Card.Img variant="top" src="holder.js/100px160" />
-           <Card.Body>
-             <Card.Title>Card title</Card.Title>
-             <Card.Text>
-               This is a wider card with supporting text below as a natural lead-in to
-               additional content. This card has even longer content than the first to
-               show that equal height action.
-             </Card.Text>
-           </Card.Body>
-           <Card.Footer>
-             <small className="text-muted">Last updated 3 mins ago</small>
-           </Card.Footer>
-          </Card>
-          </CardDeck>;
-           </Container>
-        </header>
+      <div>
+        <h2 class="ui icon center aligned header">
+          <img
+            src="./img/bwprofile.jpg"
+            alt="avatar"
+            className="ui large circular image"
+            style={{ width: 200 }}
+          />
+          <div class="content">Timothy J. Murphy</div>
+        </h2>
+        <Timeline />
       </div>
     );
   }

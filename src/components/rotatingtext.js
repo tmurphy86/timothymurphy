@@ -34,6 +34,7 @@ export default class Rotating extends React.Component {
     return (
       <div>
         <h3>Tim Murphy</h3>
+        <div className="ui inverted horizontal divider" />
         <h1>
           <ReactTextRotator content={content} time={5000} startDelay={2000} />
         </h1>

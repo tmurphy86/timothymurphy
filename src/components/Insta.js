@@ -5,6 +5,9 @@ class Insta extends React.Component {
     super(props);
     //Setting the initial state of position
     this.state = { lat: null };
+    getPic(){
+      'https://instagram.com/p/Bso63m9j1V6/media/?size=m'
+    }
 
     window.navigator.geolocation.getCurrentPosition(
       position => {

@@ -1,5 +1,6 @@
 import React from "react";
 import { push as Menu } from "react-burger-menu";
+import "./layout.css";
 
 export default class Layout extends React.Component {
   showSettings(event) {
@@ -8,12 +9,17 @@ export default class Layout extends React.Component {
   render() {
     return (
       <div id="outer-container">
-        <Menu pageWrapId={"push"} outerContainerId={"push"} isOpen={false}>
+        <Menu
+          width={"20%"}
+          pageWrapId={"page-wrap"}
+          outerContainerId={"outer-container"}
+          isOpen={false}
+        >
           <a id="home" className="menu-item" href="/">
             Home
           </a>
-          <a id="about" className="menu-item" href="/about">
-            About
+          <a id="portfolio" className="menu-item" href="/portfolio">
+            Portfolio
           </a>
           <a id="contact" className="menu-item" href="/contact">
             Contact
@@ -22,7 +28,9 @@ export default class Layout extends React.Component {
             Settings
           </a>
         </Menu>
-        <main id="page-wrap" />
+        <main id="page-wrap">
+          <div className="container fluid">{this.props.children}</div>
+        </main>
       </div>
     );
   }
