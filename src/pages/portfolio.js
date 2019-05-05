@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Timeline, HomeNavbar } from ".././components";
+import { Timeline } from ".././components";
 
 class Portfolio extends Component {
   render() {

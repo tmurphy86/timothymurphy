@@ -33,9 +33,6 @@ class Home extends Component {
         <SearchBar />
         <Container>
           <div className="ui placeholder segment">
-            <img src="./img/profilepic.jpg" class="ui large centered image" />
-          </div>
-          <div className="ui placeholder segment">
             <ApprovalCard>
               <CommentDetails
                 avatar={faker.image.avatar()}

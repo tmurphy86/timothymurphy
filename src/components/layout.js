@@ -1,19 +1,48 @@
 import React from "react";
 import { push as Menu } from "react-burger-menu";
-import "./layout.css";
+// import "./layout.css";
 
+var styles = {
+  bmBurgerBars: {
+    background: "white"
+  },
+  bmBurgerBarsHover: {
+    background: "#a90000"
+  },
+  bmCrossButton: {
+    height: "24px",
+    width: "24px"
+  },
+  bmCross: {
+    background: "#bdc3c7"
+  },
+  bmMenu: {
+    background: "light gray",
+    padding: "2.5em 1.5em 0",
+    fontSize: "1.15em"
+  },
+  bmItemList: {
+    color: "#b8b7ad",
+    padding: "0.8em"
+  },
+  bmOverlay: {
+    background: "rgba(0, 0, 0, 0.3)"
+  }
+};
 export default class Layout extends React.Component {
   showSettings(event) {
     event.preventDefault();
   }
+
   render() {
     return (
       <div id="outer-container">
         <Menu
-          width={"20%"}
+          width={"30%"}
           pageWrapId={"page-wrap"}
           outerContainerId={"outer-container"}
           isOpen={false}
+          styles={styles}
         >
           <a id="home" className="menu-item" href="/">
             Home
@@ -29,7 +58,7 @@ export default class Layout extends React.Component {
           </a>
         </Menu>
         <main id="page-wrap">
-          <div className="container fluid">{this.props.children}</div>
+          <div>{this.props.children}</div>
         </main>
       </div>
     );
