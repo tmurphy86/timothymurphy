@@ -1,10 +1,8 @@
 import React, { Component } from "react";
 import Container from "react-bootstrap/Container";
-import { push as Menu } from "react-burger-menu";
 import {
   HomeNavbar,
   Hamburger,
-  // Layout,
   Jumbo,
   CommentDetails,
   ApprovalCard,
@@ -17,9 +15,6 @@ import {
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import CardDeck from "react-bootstrap/CardDeck";
-// import Jumbotron from "react-bootstrap/Jumbotron";
-import ReactTextRotator from "react-text-rotator";
-import faker from "faker";
 import "./main.css";
 
 class Home extends Component {
@@ -35,7 +30,7 @@ class Home extends Component {
           <div className="ui placeholder segment">
             <ApprovalCard>
               <CommentDetails
-                avatar={faker.image.avatar()}
+                // avatar={this.image.avatar()}
                 author="NameProp"
                 timestamp={(Date.now() / 1000) | 0}
                 posttext="Another hard hitting piece"

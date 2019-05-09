@@ -34,8 +34,11 @@ export default class Rotating extends React.Component {
     return (
       <div>
         <h1>Timothy J. Murphy</h1>
-        <div className="ui inverted horizontal divider" />
-        <h1>
+        <div className="ui huge gray button">
+          Contact Me
+          <i className="right arrow icon" />
+        </div>
+        <h1 style={{ justifyContent: "center" }}>
           <ReactTextRotator content={content} time={5000} startDelay={2000} />
         </h1>
       </div>

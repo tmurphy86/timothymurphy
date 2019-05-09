@@ -1,5 +1,6 @@
 import React from "react";
 import Rotating from "./rotatingtext.js";
+import ModalScroll from "./ModalScroll.js";
 
 export default class Jumbo extends React.Component {
   render() {
@@ -19,9 +20,24 @@ export default class Jumbo extends React.Component {
           <h1 className="ui inverted header">
             <Rotating />
           </h1>
-          <div className="ui huge gray button">
-            Contact Me
-            <i className="right arrow icon" />
+        </div>
+        <div
+          className="ui text container"
+          style={{ position: "absolute", bottom: "10px" }}
+        >
+          <div class="ui buttons">
+            <ModalScroll />
+            <div class="or" />
+            <button class="ui huge positive button">
+              <i aria-hidden="true" class="download icon" />
+              <a
+                download
+                href="/files/Timothy_Murphy_Resume.pdf"
+                style={{ color: "white" }}
+              >
+                Download
+              </a>
+            </button>
           </div>
         </div>
       </div>

@@ -56,6 +56,22 @@ export default class Layout extends React.Component {
           <a onClick={this.showSettings} className="menu-item--small" href="">
             Settings
           </a>
+          <div
+            class="LI-profile-badge"
+            data-version="v1"
+            data-size="medium"
+            data-locale="en_US"
+            data-type="vertical"
+            data-theme="dark"
+            data-vanity="techmurphy"
+          >
+            <a
+              className="LI-simple-link"
+              href="https://www.linkedin.com/in/techmurphy?trk=profile-badge"
+            >
+              Timothy Murphy
+            </a>
+          </div>
         </Menu>
         <main id="page-wrap">
           <div>{this.props.children}</div>

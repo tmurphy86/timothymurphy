@@ -10,3 +10,5 @@ export { default as Position } from "./Position.js";
 export { default as Clock } from "./Clock.js";
 export { default as SearchBar } from "./SearchBar.js";
 export { default as ContactMe } from "./ContactMe.js";
+export { default as Resume } from "./Resume.js";
+export { default as ModalScroll } from "./ModalScroll.js";
