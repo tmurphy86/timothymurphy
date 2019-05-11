@@ -1,10 +1,9 @@
 import React from "react";
-import { push as Menu } from "react-burger-menu";
-// import "./layout.css";
+import { slide as Menu } from "react-burger-menu";
 
 var styles = {
   bmBurgerBars: {
-    background: "white"
+    background: "Gray"
   },
   bmBurgerBarsHover: {
     background: "#a90000"
@@ -17,13 +16,20 @@ var styles = {
     background: "#bdc3c7"
   },
   bmMenu: {
-    background: "light gray",
-    padding: "2.5em 1.5em 0",
-    fontSize: "1.15em"
+    background: "Gray",
+    padding: "0.5em 0.3em 0",
+    fontSize: "1.5em",
+    opacity: "0.85"
   },
   bmItemList: {
-    color: "#b8b7ad",
+    color: "black",
     padding: "0.8em"
+  },
+  bmItem: {
+    padding: ".5em",
+    color: "black",
+    fontFamily: "Raleway",
+    textAlign: "center"
   },
   bmOverlay: {
     background: "rgba(0, 0, 0, 0.3)"
@@ -38,7 +44,7 @@ export default class Layout extends React.Component {
     return (
       <div id="outer-container">
         <Menu
-          width={"30%"}
+          width={"25%"}
           pageWrapId={"page-wrap"}
           outerContainerId={"outer-container"}
           isOpen={false}
@@ -57,7 +63,7 @@ export default class Layout extends React.Component {
             Settings
           </a>
           <div
-            class="LI-profile-badge"
+            className="LI-profile-badge"
             data-version="v1"
             data-size="medium"
             data-locale="en_US"

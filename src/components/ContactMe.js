@@ -1,122 +1,77 @@
 import React from "react";
-// import { jQuery as $ } from "jquery";
+import { Button, Header, Icon, Modal } from "semantic-ui-react";
 
 class ContactMe extends React.Component {
   state = {
-    fname: "",
-    lname: "",
+    name: "",
     address: "",
     number: "",
-    comment: ""
+    comment: "",
+    modalOpen: false
   };
 
   onFormSubmit = event => {
     event.preventDefault();
   };
 
-  //   $('.ui.form')
-  //   .form({
-  //     fields: {
-  //       name: {
-  //         identifier: 'name',
-  //         rules: [
-  //           {
-  //             type   : 'empty',
-  //             prompt : 'Please enter your name'
-  //           }
-  //         ]
-  //       },
-  //       skills: {
-  //         identifier: 'skills',
-  //         rules: [
-  //           {
-  //             type   : 'minCount[2]',
-  //             prompt : 'Please select at least two skills'
-  //           }
-  //         ]
-  //       },
-  //       gender: {
-  //         identifier: 'gender',
-  //         rules: [
-  //           {
-  //             type   : 'empty',
-  //             prompt : 'Please select a gender'
-  //           }
-  //         ]
-  //       },
-  //       username: {
-  //         identifier: 'username',
-  //         rules: [
-  //           {
-  //             type   : 'empty',
-  //             prompt : 'Please enter a username'
-  //           }
-  //         ]
-  //       },
-  //       password: {
-  //         identifier: 'password',
-  //         rules: [
-  //           {
-  //             type   : 'empty',
-  //             prompt : 'Please enter a password'
-  //           },
-  //           {
-  //             type   : 'minLength[6]',
-  //             prompt : 'Your password must be at least {ruleValue} characters'
-  //           }
-  //         ]
-  //       },
-  //       terms: {
-  //         identifier: 'terms',
-  //         rules: [
-  //           {
-  //             type   : 'checked',
-  //             prompt : 'You must agree to the terms and conditions'
-  //           }
-  //         ]
-  //       }
-  //     }
-  //   })
-  // ;
+  handleOpen = () => this.setState({ modalOpen: true });
+
+  handleClose = () => this.setState({ modalOpen: false });
+
   render() {
     return (
-      <div className="ui segment">
-        <form onSubmit={this.onFormSubmit} className="ui form">
-          <div className="field">
-            <label>First Name:</label>
-            <input
-              type="text"
-              prompt="First Name..."
-              value={this.state.fname}
-              onChange={e => this.setState({ fname: e.target.value })}
-            />
-            <label>Last Name:</label>
-            <input
-              type="text"
-              value={this.state.lname}
-              onChange={e => this.setState({ lname: e.target.value })}
-            />
-            <label>Email Address:</label>
-            <input
-              type="text"
-              value={this.state.address}
-              onChange={e => this.setState({ address: e.target.value })}
-            />
-            <label>Phone Number:</label>
-            <input
-              type="text"
-              value={this.state.number}
-              onChange={e => this.setState({ number: e.target.value })}
-            />
-            <label>Comment:</label>
-            <input
-              type="text"
-              value={this.state.comment}
-              onChange={e => this.setState({ comment: e.target.value })}
-            />
-          </div>
-        </form>
-      </div>
+      <Modal
+        trigger={
+          <Button onClick={this.handleOpen}>
+            Contact Me
+            <i className="right arrow icon" />
+          </Button>
+        }
+        open={this.state.modalOpen}
+        onClose={this.handleClose}
+        basic
+        style={{ position: "relative" }}
+        size="huge"
+      >
+        <Header icon="paper plane outline" content="Contact Tim" />
+        <Modal.Content>
+          <form onSubmit={this.onFormSubmit} className="ui inverted big form">
+            <div className="field">
+              <label>Name:</label>
+              <input
+                type="text"
+                value={this.state.name}
+                onChange={e => this.setState({ name: e.target.value })}
+              />
+              <label>Email Address:</label>
+              <div class="required field">
+                <input
+                  type="text"
+                  value={this.state.address}
+                  onChange={e => this.setState({ address: e.target.value })}
+                />
+              </div>
+              <label>Phone Number:</label>
+              <input
+                type="text"
+                value={this.state.number}
+                onChange={e => this.setState({ number: e.target.value })}
+              />
+              <label>Comment:</label>
+              <input
+                type="text"
+                value={this.state.comment}
+                onChange={e => this.setState({ comment: e.target.value })}
+              />
+            </div>
+          </form>
+        </Modal.Content>
+        <Modal.Actions>
+          <Button color="green" onClick={this.handleClose} inverted>
+            <Icon name="checkmark" /> Submit
+          </Button>
+        </Modal.Actions>
+      </Modal>
     );
   }
 }

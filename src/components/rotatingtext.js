@@ -1,5 +1,6 @@
 import React from "react";
 import ReactTextRotator from "react-text-rotator";
+import ContactMe from "./ContactMe.js";
 
 const content = [
   {
@@ -33,14 +34,10 @@ export default class Rotating extends React.Component {
   render() {
     return (
       <div>
-        <h1>Timothy J. Murphy</h1>
-        <div className="ui huge gray button">
-          Contact Me
-          <i className="right arrow icon" />
-        </div>
-        <h1 style={{ justifyContent: "center" }}>
+        <h1>
           <ReactTextRotator content={content} time={5000} startDelay={2000} />
         </h1>
+        <ContactMe />
       </div>
     );
   }
