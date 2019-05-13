@@ -1,12 +1,11 @@
 {
-  "name": "tim",
+  "name": "timothymurphy.dev",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
     "axios": "^0.18.0",
     "bootstrap": "^4.3.1",
     "d3": "^5.9.2",
-    "faker": "^4.1.0",
     "react": "^16.8.6",
     "react-bootstrap": "^1.0.0-beta.8",
     "react-burger-menu": "^2.6.9",
@@ -33,5 +32,8 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "devDependencies": {
+    "faker": "^4.1.0"
+  }
 }
