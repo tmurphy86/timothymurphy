@@ -3,14 +3,15 @@ import { slide as Menu } from "react-burger-menu";
 
 var styles = {
   bmBurgerBars: {
-    background: "Gray"
+    background: "gainsboro"
   },
   bmBurgerBarsHover: {
     background: "#a90000"
   },
   bmCrossButton: {
     height: "24px",
-    width: "24px"
+    width: "24px",
+    color: "red"
   },
   bmCross: {
     background: "#bdc3c7"
@@ -36,10 +37,6 @@ var styles = {
   }
 };
 export default class Layout extends React.Component {
-  showSettings(event) {
-    event.preventDefault();
-  }
-
   render() {
     return (
       <div id="outer-container">
@@ -49,6 +46,7 @@ export default class Layout extends React.Component {
           outerContainerId={"outer-container"}
           isOpen={false}
           styles={styles}
+          disableAutoFocus
         >
           <a id="home" className="menu-item" href="/">
             Home
@@ -58,9 +56,6 @@ export default class Layout extends React.Component {
           </a>
           <a id="portfolio" className="menu-item" href="/portfolio">
             Portfolio
-          </a>
-          <a onClick={this.showSettings} className="menu-item--small" href="">
-            Settings
           </a>
           <div
             className="LI-profile-badge"

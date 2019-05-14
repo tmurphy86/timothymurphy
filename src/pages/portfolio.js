@@ -1,4 +1,20 @@
 import React, { Component } from "react";
+import { Card } from "semantic-ui-react";
+
+const items = [
+  {
+    header: "Project Report - April",
+    description:
+      "Leverage agile frameworks to provide a robust synopsis for high level overviews.",
+    meta: "ROI: 30%"
+  },
+  {
+    header: "Project Report - May",
+    description:
+      "Bring to the table win-win survival strategies to ensure proactive domination.",
+    meta: "ROI: 34%"
+  }
+];
 
 class Portfolio extends Component {
   render() {
@@ -15,21 +31,17 @@ class Portfolio extends Component {
         </h2>
         <div className="ui basic center aligned segment">
           <div className="ui horizontal divider">
-            <div
-              className="github-card"
-              data-github="tmurphy86"
-              data-width="400"
-              data-height="150"
-              data-theme="default"
-            />
             <h3 className="ui header">Code</h3>
           </div>
+          <Card.Group centered items={items} />
           <div className="ui horizontal divider">
             <h3 className="ui header">Data</h3>
           </div>
+          <Card.Group centered items={items} />
           <div className="ui horizontal divider">
             <h3 className="ui header">Photography</h3>
           </div>
+          <Card.Group centered items={items} />
         </div>
       </div>
     );
