@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Jumbo } from ".././components";
+import { Jumbo } from "../components";
 import "./main.css";
 
 class Home extends Component {

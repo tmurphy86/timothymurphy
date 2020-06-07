@@ -1,3 +1,20 @@
+<!-- Author: Tim Murphy -->
+
+<div align="center">
+  <img src="./public/img/process.png" width="200" />
+  <h3>Site Builder</h3>
+</div>
+
+<br />
+
+<div align="center">  
+
+  [![Jenkins](https://img.shields.io/badge/test-jenkins-blue?style=for-the-badge)](https://jenkins.inradar.net/blue/organizations/jenkins/automaton%2Fstore-demo-app/branches)
+  [![Slack](https://img.shields.io/badge/slack-%23demo-purple?style=for-the-badge)](https://automaton.slack.com/archives/C011KC0MATV)
+</div>
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
@@ -71,3 +88,21 @@ This section has moved here: https://facebook.github.io/create-react-app/docs/de
 ### `npm run build` fails to minify
 
 This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+
+
+# Notes
+
+## Development environment
+Install yarn, npm, node, etc
+
+## Local development
+`yarn build `
+
+## Docker development
+cd to root of repo and run `docker build -t murphy-dev:latest .`
+To run container locally `docker run -p 80:3000 murphy-dev/alpha:latest` add a `-d` switch to allow to run in the background.
+
+## Updating `package.json`
+Verify which packages are outdating either by checking their packages documentation or use 
+
+To upgrade all dependencies use install `npm install -g npm-check-updates` (note the globally switch) & then running `ncu -u` which will update the json file. For local builds you will then need to run `yarn update`

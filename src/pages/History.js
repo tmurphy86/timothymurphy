@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { Timeline } from ".././components";
+import { Timeline } from "../components";
 
 class History extends Component {
   render() {
